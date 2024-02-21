@@ -8,15 +8,22 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .tsx --ext .tsx ./",
     "prepare": "husky install",
     "test": "echo hello world"
   },
   "dependencies": {
+    "axios": "^1.6.7",
+    "dayjs": "^1.11.10",
     "expo": "~50.0.7",
     "expo-status-bar": "~1.11.1",
+    "lottie-react-native": "^6.6.0",
     "nativewind": "^2.0.11",
+    "phosphor-react-native": "^2.0.0",
     "react": "18.2.0",
-    "react-native": "0.73.4"
+    "react-hook-form": "^7.50.1",
+    "react-native": "0.73.4",
+    "zod": "^3.23.0-canary.20240215T003902"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -26,8 +33,9 @@
     "eslint": "^8.56.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.33.2",
-    "husky": "^8.0.0",
+    "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
+    "plop": "^4.0.1",
     "prettier": "^3.2.5",
     "tailwindcss": "3.3.2",
     "typescript": "^5.1.3"
@@ -41,7 +49,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-stageday"
+      "pre-commit": "lint-staged"
     }
   }
 }
